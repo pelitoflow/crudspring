@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 //@RestController
 @Controller
-@RequestMapping("miapp/tester")
+@RequestMapping("elpirata")
 @CrossOrigin("*")
 public class ClienteController {
     
