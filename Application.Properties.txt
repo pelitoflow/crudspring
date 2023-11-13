@@ -1,0 +1,12 @@
+#CONEXIO APPLICATION.PROPERTIES SPRING BOOT Vs SQL SERVER:
+
+#spring.datasource.url=jdbc:sqlserver://laurens\\sqlsena:1433;databaseName:sena;encrypt=True;sendStringParametersAsUnicode=false;TrustServerCertificate=True
+#spring.datasource.hikari.jdbc-url=jdbc:sqlserver://laurens\sqlsena:1433;databaseName:sena;sendStringParametersAsUnicode=false;TrustServerCertificate=True
+#spring.datasource.jdbc-url=jdbc:sqlserver://localhost:1433;instanceName=SQLSENA;databaseName=sena;sendStringParametersAsUnicode=false;TrustServerCertificate=True
+#spring.datasource.hikari.jdbc-url=url=jdbc:sqlserver://LaurenS:1433;databaseName=sena;sendStringParametersAsUnicode=false;TrustServerCertificate=True
+spring.datasource.url = jdbc:sqlserver://localhost:1433;databaseName=clientes
+spring.datasource.username=sa
+spring.datasource.password=root
+spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.jpa.database-platform=org.hibernate.dialect.SQLServerDialect
+logging.level.org.springframework = DEBUG
