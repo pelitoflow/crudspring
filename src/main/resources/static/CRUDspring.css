@@ -24928,4 +24928,37 @@ div.dataTables_wrapper div.dataTables_filter {
   border: none;
   border-radius: 15px;
 }
-/*# sourceMappingURL=ekka.css.map */
+
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 30%; /* Centra el modal verticalmente en la mitad de la página */
+  left: 50%; /* Centra el modal horizontalmente en la mitad de la página */
+  transform: translate(-50%, -50%); /* Ajusta el modal para que esté completamente centrado */
+  width: 300px; /* Ajusta el ancho del modal según tus necesidades */
+  max-width: 50%; /* Establece un ancho máximo para el modal */
+  max-height: 60%; /* Establece una altura máxima para el modal (el 60% de la altura de la ventana) */
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-contenido {
+  /* Puedes agregar estilos adicionales según tus necesidades */
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Otros estilos según tus preferencias */
+
+
+

@@ -23,25 +23,75 @@
                             <th scope="col">Apellidos</th>
                             <th scope="col">Ciudad</th>
                             <th scope="col">Teléfono</th>
-                            <th >Acciones</th>
+                            <th scope="col" >Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
-    <tr th:each="cliente : ${clientes}">
-        <td th:text="${cliente.id}"></td>
-        <td th:text="${cliente.nombres}"></td>
-        <td th:text="${cliente.apellidos}"></td>
-        <td th:text="${cliente.ciudad}"></td>
-        <td th:text="${cliente.telefono}"></td>
-        <td>
-            <a class="btn btn-success actualizar-button" data-client-id="${cliente.id}">Actualizar</a>
-            <a class="btn btn-danger eliminar-button" data-client-id="${cliente.id}">Eliminar</a>
-        </td>
-    </tr>
-</tbody>
+                        <tr th:each="cliente : ${clientes}">
+                            <td th:text="${cliente.id}"></td>
+                            <td th:text="${cliente.nombres}"></td>
+                            <td th:text="${cliente.apellidos}"></td>
+                            <td th:text="${cliente.ciudad}"></td>
+                            <td th:text="${cliente.telefono}"></td>
+                            <td>
+                                <a class="btn btn-success actualizar-button" data-client-id="${cliente.id}">Actualizar</a>
+                                <a class="btn btn-danger eliminar-button" data-client-id="${cliente.id}">Eliminar</a>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
+        </div>      
+
+        <!-- Agregar Usuario Button -->
+        <button id="abrirModalBtn" class="btn btn-primary">Agregar Usuario</button>
+
+        <!-- Modal para Agregar Usuario -->
+        <div id="miModal" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" id="cerrarModal">&times;</span>
+                <!-- Contenido del modal para agregar un usuario -->
+                <h2>Agregar Usuario</h2>
+                <form id="formularioUsuario">
+                    <!-- Campos del formulario -->
+                    <div class="mb-3">
+                        <label for="modalId" class="form-label">ID:</label>
+                        <input type="text" class="form-control" id="modalId" name="modalId" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="modalNombre" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="modalNombre" name="modalNombre" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="modalApellidos" class="form-label">Apellidos:</label>
+                        <input type="text" class="form-control" id="modalApellidos" name="modalApellidos" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="modalEmail" class="form-label">Correo electrónico:</label>
+                        <input type="email" class="form-control" id="modalEmail" name="modalEmail" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="modalCiudad" class="form-label">Ciudad:</label>
+                        <input type="text" class="form-control" id="modalCiudad" name="modalCiudad" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="modalTelefono" class="form-label">Teléfono:</label>
+                        <input type="tel" class="form-control" id="modalTelefono" name="modalTelefono" required>
+                    </div>
+
+                    <!-- Otros campos del formulario -->
+
+                    <button type="submit" class="btn btn-success">Agregar</button>
+                </form>
+            </div>
         </div>
+
+
         <script src="/accion.js"></script>
     </body>
 </html>
